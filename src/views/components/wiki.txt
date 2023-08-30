@@ -1,0 +1,3 @@
+https://github.com/IanLunn/Hover/issues?q=is%3Aissue+is%3Aclosed
+
+file:///C:/Projetos/projeto%20site%20atak/src/views/components/Hover-master/index.html

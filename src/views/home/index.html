@@ -4,22 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Site Atak Ale e Bruno</title>
+    <title>Site Ale e Bruno</title>
 </head>
 <body>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Nome do Seu Site</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo"> <img src ="https://ataksistemas.com.br/wp-content/uploads/2021/01/logo-atak.png"></div>
-
-            <ul class="nav-links">
+    <header class="main-header">
+        <div class="logo">
+            <img src="https://ataksistemas.com.br/wp-content/uploads/2021/01/logo-atak.png" alt="Logo da Atak">
+        </div>
+        <nav class="main-nav">
+            <ul>
                 <li><a href="#">Início</a></li>
                 <li><a href="#">Serviços</a></li>
                 <li><a href="#">Sobre Nós</a></li>
@@ -28,10 +21,16 @@
         </nav>
     </header>
     
-    <section class="hero">
+    <section class="hero">  
+
         <h1>Bem-vindo ao Nosso Site</h1>
-        <p>Oferecemos aqui um site totalmente desenvolvido por noobtechs que estao estudando para virar desenvolvedores.</p>
+        <p>Oferecemos aqui um site totalmente desenvolvido por iniciantes em tecnologia que estão estudando para se tornarem desenvolvedores.</p>
         <a href="#" class="hvr-rectangle-out">Saiba Mais</a>
+    </section>
+
+    <section id="imagem-container">
+        <img src="https://ataksistemas.com.br/wp-content/uploads/2021/01/case-mafrinorte-cases-sucesso-atak-sistemas.jpg" alt="Imagem 1">
+        <img src="https://ataksistemas.com.br/wp-content/uploads/2021/01/case-frigorifico-astra-atak-sistemas.jpg" alt="Imagem 2">
     </section>
 
     <section class="services">
@@ -51,10 +50,56 @@
     </section>
 
     <footer>
-        <p>&copy; 2023 Nome da Sua Empresa. Todos os direitos reservados.</p>
+        <div class="footer-container">
+            <div class="footer-content">
+                <p>&copy; 2023 Seu Site. Todos os direitos reservados.</p>
+                <div class="subscribe">
+                    <input type="email" placeholder="Seu melhor e-mail">
+                    <button type="button">Quero receber atualizações</button>
+                    <button id="topButton" title="Voltar ao Topo">&#9650;</button>
+                </div>
+            </div>
+        </div>
     </footer>
-</body>
-</html>
+    
+    <script>
+        const images = document.querySelectorAll("#imagem-container img");
+        let currentImageIndex = 0;
 
+        function showNextImage() {
+            images[currentImageIndex].classList.remove("active");
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].classList.add("active");
+        }
+
+        // Inicia a apresentação das imagens
+        showNextImage();
+        setInterval(showNextImage, 5000); // Alterna as imagens a cada 5 segundos
+    </script>
+
+    <script>
+        // Adiciona um evento de rolagem (scroll) para mostrar/ocultar o botão "Voltar ao Topo"
+        window.addEventListener('scroll', function() {
+            var topButton = document.getElementById('topButton');
+            if (window.scrollY > 300) { // Mostra o botão quando o usuário rolar 300 pixels para baixo
+                topButton.style.display = 'block';
+            } else {
+                topButton.style.display = 'none';
+            }
+        });
+        
+        // Adiciona um evento de clique ao botão "Voltar ao Topo" para rolar suavemente para o topo
+        document.getElementById('topButton').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Rolagem suave
+            });
+        });
+        </script>
+        
+        
+        
+        
+        
 </body>
 </html>

@@ -27,9 +27,10 @@ body {
     align-items: center;
 }
 
-.logo img {
+.logo {
     width: 200px; 
     height: auto;
+    cursor:pointer
 }
 
 .main-nav ul {
@@ -49,43 +50,6 @@ body {
 
 .main-nav a:hover {
     color: #ff0000;
-}
-
-/* Estilos para o botão hvr-rectangle-out */
-.hvr-rectangle-out {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(241, 4, 4, 0);
-    position: relative;
-    background: #f7f7f7;
-    transition-property: color;
-    transition-duration: 0.3s;
-    color: #000000;
-}
-
-.hvr-rectangle-out:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #ff0404;
-    transform: scale(0);
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
-}
-
-.hvr-rectangle-out:hover, .hvr-rectangle-out:focus, .hvr-rectangle-out:active {
-    color: #fafafa;
-}
-
-.hvr-rectangle-out:hover:before, .hvr-rectangle-out:focus:before, .hvr-rectangle-out:active:before {
-    transform: scale(1);
 }
 
 .imagem-container img {
@@ -154,3 +118,4 @@ footer {
 #topButton:hover {
     background-color: #ff0000; /* Cor de fundo do botão ao passar o mouse */
 }
+

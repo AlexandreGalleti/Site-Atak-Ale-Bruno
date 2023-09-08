@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">  
     <title>Site Ale e Bruno</title>
 </head>
 <body>
-    <header class="main-header">
+    <div class="parallax">
+        <div class="parallax-bg"></div>
+    </div>
+
+    <header class="main-header fixed-header">
         <div class="logo">
             <img src="https://ataksistemas.com.br/wp-content/uploads/2021/01/logo-atak.png" alt="Logo da Atak">
         </div>
@@ -15,21 +20,59 @@
             <ul>
                 <li><a href="http://127.0.0.1:5500/src/views/home/index.html#">Início</a></li>
                 <li><a href="#">Serviços</a></li>
-                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="http://127.0.0.1:5501/index.html">Sobre Nós</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
     </header>
     
     <section class="hero">  
-
         <h1>Bem-vindo ao Nosso Site</h1>
         <p>Oferecemos aqui um site totalmente desenvolvido por iniciantes em tecnologia que estão estudando para se tornarem desenvolvedores.</p>
     </section>
-
+    <section id="carousel-with-text" class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Conteúdo de texto aqui -->
+                <h2>Qual a finalidade deste site ?</h2>
+                <p> Este site foi criado com um objetivo claro: impulsionar meu caminho rumo ao mundo da programação. 
+                    Como um aspirante a desenvolvedor, estou empenhado em adquirir conhecimento e experiência neste 
+                    emocionante campo da tecnologia.</p>
+                <p>Através deste site, estou colocando em prática o que aprendi até agora. 
+                    Quero demonstrar minhas habilidades, aprender com meus erros e evoluir como desenvolvedor. 
+                    Este é apenas o começo de uma jornada fascinante.</p>
+                <p>Então, fique à vontade para explorar nosso site. Estou empolgado para compartilhar meu progresso 
+                    com você e ansioso para as oportunidades que a programação oferece no futuro. Obrigado por fazer 
+                    parte desta jornada.</p>
+                <p>Eu sei que sou um iniciante na programação, mas tenho uma certeza inabalável: não vou desistir. 
+                    Este site é o testemunho do meu compromisso em melhorar e evoluir constantemente.</p>
+                <p>Cada linha de código que escrevo, cada desafio que enfrento, é uma oportunidade para 
+                    aprender e crescer. Entendo que a jornada para me tornar um programador habilidoso será repleta
+                    de desafios, mas estou pronto para enfrentá-los de frente.</p>
+                
+            </div>
     <section id="imagem-container">
-        <img src="https://ataksistemas.com.br/wp-content/uploads/2021/01/case-mafrinorte-cases-sucesso-atak-sistemas.jpg" alt="Imagem 1">
-        <img src="https://ataksistemas.com.br/wp-content/uploads/2021/01/case-frigorifico-astra-atak-sistemas.jpg" alt="Imagem 2">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2000">
+                <img src="https://ataksistemas.com.br/wp-content/uploads/2021/01/case-frigorifico-astra-atak-sistemas.jpg" class="d-block w-100" alt="imagem 1">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://ataksistemas.com.br/wp-content/uploads/2021/01/case-curtume-vitapelli-atak-sistemas.jpg" class="d-block w-100" alt="imagem 2 ">
+              </div>
+              <div class="carousel-item">
+                <img src="https://ataksistemas.com.br/wp-content/uploads/2021/01/case-mafrinorte-cases-sucesso-atak-sistemas.jpg" class="d-block w-100" alt="imagem 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
     </section>
 
     <section class="services">
@@ -61,22 +104,8 @@
         </div>
     </footer>
     
-    
-    <script>
-        const images = document.querySelectorAll("#imagem-container img");
-        let currentImageIndex = 0;
-
-        function showNextImage() {
-            images[currentImageIndex].classList.remove("active");
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            images[currentImageIndex].classList.add("active");
-        }
-
-        // Inicia a apresentação das imagens
-        showNextImage();
-        setInterval(showNextImage, 5000); // Alterna as imagens a cada 5 segundos
-    </script>
-
+    <!-- JavaScript -->
+   
     <script>
         // Adiciona um evento de rolagem (scroll) para mostrar/ocultar o botão "Voltar ao Topo"
         window.addEventListener('scroll', function() {
@@ -84,7 +113,7 @@
             if (window.scrollY > 300) { // Mostra o botão quando o usuário rolar 300 pixels para baixo
                 topButton.style.display = 'block';
             } else {
-                topButton.style.display = 'none';
+                topButton.style.display = 'none';   
             }
         });
         
@@ -95,11 +124,7 @@
                 behavior: 'smooth' // Rolagem suave
             });
         });
-        </script>
-        
-        
-        
-        
-        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

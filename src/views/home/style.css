@@ -1,35 +1,22 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto);
-
-/* Estilos globais */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    margin: auto;
-    padding: 0;
-}
-
-h1 {
-    color: #000000;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-.main-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white; /* Cor do texto no cabeçalho */
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 100; /* Garante que o cabeçalho esteja sempre na parte superior */
 }
 
+
 .logo {
-    width: 200px; 
-    height: auto;
+    width: 50px; 
+    height: 60px;
     cursor:pointer
 }
 
@@ -52,12 +39,56 @@ body {
     color: #ff0000;
 }
 
-.imagem-container img {
-  display: none; /* Oculta todas as imagens inicialmente */
+/* Estilos para a seção parallax */
+.parallax {
+    background-image: url('https://ataksistemas.com.br/wp-content/uploads/2021/01/case-mafrinorte-cases-sucesso-atak-sistemas.jpg'); /* Substitua 'sua-imagem.jpg' pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 97%;
+    z-index: -1;
 }
 
-.imagem-container img.active {
-  display: block; /* Mostra a imagem ativa */
+/* Estilos para o fundo parallax */
+.parallax-bg {
+    position: relative;
+    background-color: #f8f8f8; /* Cor de fundo de fallback caso a imagem não seja carregada */
+    overflow: hidden;
+}
+
+/* Estilos para o conteúdo do site */
+/* Adicione margem superior para evitar que o conteúdo seja oculto pelo fundo parallax */
+/* Ajuste conforme necessário */
+
+body {
+    margin-top: 400px; /* Ajuste essa margem conforme necessário para o tamanho do seu header */
+}
+
+/* Estilos para o seu header (opcional) */
+/* Adicione estilos personalizados ao seu header, se necessário */
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 90px; /* Espaço de preenchimento para acomodar o cabeçalho fixo */
+}
+h1 {
+    color: #000000;
+}
+
+#imagem-container {
+    max-width: 600px; /* Defina a largura máxima para o container do carrossel */
+    margin: 0 auto; /* Centralize horizontalmente */
+}
+
+.carousel-inner img {
+    max-width: 100%; /* Faça as imagens ocuparem a largura máxima do container */
+    height: auto; /* Mantenha a proporção original da imagem */
 }
 
 

@@ -14,6 +14,18 @@
 }
 
 
+.introducao {
+    color: #ffffff;
+    padding-top: 200px;
+    padding-bottom: 400px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+}
 .logo {
     width: 50px; 
     height: 60px;
@@ -41,7 +53,7 @@
 
 /* Estilos para a seção parallax */
 .parallax {
-    background-image: url('https://ataksistemas.com.br/wp-content/uploads/2021/01/case-mafrinorte-cases-sucesso-atak-sistemas.jpg'); /* Substitua 'sua-imagem.jpg' pelo caminho da sua imagem */
+    background-image: url('https://i.makeagif.com/media/2-14-2023/vhAZhm.gif'); /* Substitua 'sua-imagem.jpg' pelo caminho da sua imagem */
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -77,9 +89,7 @@ body {
     font-family: Arial, sans-serif;
     padding-top: 90px; /* Espaço de preenchimento para acomodar o cabeçalho fixo */
 }
-h1 {
-    color: #000000;
-}
+
 
 #imagem-container {
     max-width: 600px; /* Defina a largura máxima para o container do carrossel */
@@ -91,6 +101,29 @@ h1 {
     height: auto; /* Mantenha a proporção original da imagem */
 }
 
+.services{
+    padding-top: 50px;
+}
+
+.imagepython{
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    padding:50px;
+}
+
+.imagedelphi{
+    width: 500px;
+    height: auto;
+    cursor: pointer;
+    padding:50px;
+}
+
+.imagehtml{
+    width: 100px;
+    height: auto;
+    cursor:pointer;
+}
 
 /* Estilize o footer */
 footer {

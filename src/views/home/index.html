@@ -19,9 +19,9 @@
         <nav class="main-nav">
             <ul>
                 <li><a href="http://127.0.0.1:5500/src/views/home/index.html#">Início</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="http://127.0.0.1:54051/index.html">Sobre Nós</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#Services">Serviços</a></li>
+                <li><a href="http://127.0.0.1:5501">Sobre Nós</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -76,8 +76,10 @@
             </button>
           </div>
     </section>
+    
+    <div id="Services"></div>
 
-    <section class="services">
+    <section class="services" id="Services">
         <h2>Projetos e suas Linguagens</h2>
         <div class="imagepython">
             <img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python logo">
@@ -145,13 +147,16 @@
         </div>
     </section>
 
+    <div class="agradecimento">
+        <h3>Agradecemos sinceramente por visitar o nosso site e por dedicar seu tempo e atenção a explorar o que temos a oferecer.</h3>
+    </div>
     <footer>
-        <div class="footer-container">
+        <div class="footer-container" id="contact">
             <div class="footer-content">
                 <div class="subscribe">
                     <input type="email" placeholder="Seu melhor e-mail">
                     <button type="button">Quero receber atualizações</button>
-                    <p>&copy; 2023 Alexandre Galleti e Bruno Oliveira. Todos os direitos reservados.</p>
+                    <p>&copy; 2023 Alexandre Galleti . Todos os direitos reservados a Atak Sistemas</p>
                     <button id="topButton" title="Voltar ao Topo">&#9650;</button>
                 </div>
             </div>
